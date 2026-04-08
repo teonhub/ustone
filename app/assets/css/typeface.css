@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-Light.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-Light.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-Medium.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-Medium.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-BoldItalic.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-BoldItalic.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-MediumItalic.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-MediumItalic.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-Thin.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-Thin.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-BlackItalic.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-BlackItalic.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-Black.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-Black.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-Regular.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-Regular.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-Bold.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-Bold.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-Italic.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-Italic.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-LightItalic.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-LightItalic.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roberto Sans';
+    src: url('~/assets/font/robert/RobertoSans-ThinItalic.woff2') format('woff2'),
+        url('~/assets/font/robert/RobertoSans-ThinItalic.woff') format('woff'),
+        url('~/assets/font/robert/RobertoSans-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}

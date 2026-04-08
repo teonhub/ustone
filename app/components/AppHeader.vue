@@ -1,0 +1,4 @@
+<template>
+    <AppNavDesktop />
+    <AppNavMobile />
+</template>
