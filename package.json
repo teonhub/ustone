@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.11.3",
     "fancybox": "^3.0.1",
     "jquery": "^4.0.0",
     "nuxt": "^4.4.2",

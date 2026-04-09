@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
+    modules: ['@pinia/nuxt'],
     css: [
         '~/assets/css/normalize.css',
         '~/assets/css/typeface.css',
@@ -14,9 +15,7 @@ export default defineNuxtConfig({
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
             meta: [ { name: 'format-detection', content: 'telephone=no' } ],
-            link: [
-                { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-            ],
+            link: [ { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' } ]
         }
-    },
+    }
 })
