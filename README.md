@@ -1,75 +1,44 @@
-# Nuxt Minimal Starter
+### Nuxtapp [ecommerce]
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+   ```bash  
+   url: https://under-stone.ru
+   ```
 
-## Setup
 
-Make sure to install dependencies:
+### Требования
 
-```bash
-# npm
-npm install
+   _ `Node.js:** 18.x`  
+   _ `Nuxt.js: 4.x`    
+   _ `Pinia (state management)`  
+   _ `TypeScript`    
+   _ `PHPmailer`
 
-# pnpm
-pnpm install
 
-# yarn
-yarn install
+### Документация
+   ```bash  
+   url: https://nuxt.com/docs/4.x/
+   ```
 
-# bun
-bun install
-```
+###  Установка и запуск
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+   ```bash  
+   # clone
+   git clone https://github.com/teonhub/ustone.git
+   npm install
+   ```
+   ```bash
+   # start  
+   npm run dev  
+   ```
+   ```bash
+   # open app 
+   url: http://localhost:3000
+   ```
+   ```bash
+   # build
+   npm run build  
+   ```
+   ```bash
+   # generate ssg  
+   npm run generate
+   ```

@@ -3,7 +3,7 @@
         <div class="container-large">
             <h3>Товары сезона</h3>
                 <div class="grid-season">
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="maf-01.jpg"
                         name="Вазон Daisy"
@@ -11,7 +11,7 @@
                         group="Артстрой"
                         status="В наличии"
                     />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="maf-02.jpg"
                         name="Отбойник Lighthouse"
@@ -19,7 +19,7 @@
                         group="Артстрой"
                         status="В наличии"
                     />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="dpk-01.jpg"
                         name="Заборная доска двусторонняя Ecodecking Титан"
@@ -27,7 +27,7 @@
                         group="Ecodecking"
                         status="В наличии"
                     />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="dpk-02.jpg"
                         name="Реечная фасадная панель Ecodecking Техно"
@@ -35,7 +35,7 @@
                         group="Ecodecking"
                         status="В наличии"
                     />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="dpk-03.jpg"
                         name="Фасадная доска Ecodecking Экстра"
@@ -43,7 +43,7 @@
                         group="Ecodecking"
                         status="В наличии"
                     />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="dpk-04.jpg"
                         name="Террасная доска Ecodecking Титан односторонняя обработка"
@@ -51,7 +51,7 @@
                         group="Ecodeckin"
                         status="В наличии"
                     />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="dpk-05.jpg"
                         name="Террасная доска Ecodecking Техно плюс"
@@ -59,7 +59,7 @@
                         group="Ecodecking"
                         status="В наличии"
                     />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="dpk-06.jpg"
                         name="Террасная доска Ecodecking Техно плюс"

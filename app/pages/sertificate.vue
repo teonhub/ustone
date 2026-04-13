@@ -11,7 +11,7 @@
         <section class="layout-commodity">
             <div class="container-large">
                 <div class="bread-crumbs" aria-label="Хлебные крошки">
-                    <AppBreadcrumbs />
+                    <UiAppBreadcrumbs />
                     <h1>Сертификаты</h1>
                 </div>
                 <div class="document-items">

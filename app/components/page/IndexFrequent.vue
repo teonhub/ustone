@@ -3,7 +3,7 @@
         <div class="container-large">
             <h3>Тротуарная плитка в Орле</h3>
                 <div class="grid-season">
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="ya-tro-1.jpg"
                         name="Инсбрук"
@@ -11,7 +11,7 @@
                         group="Ярстрой"
                         status="В наличии"
                     />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="ya-tro-2.png"
                         name="Вилла"
@@ -19,7 +19,7 @@
                         group="Ярстрой"
                         status="В наличии"
                     />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="ar-tro-1.jpeg"
                         name="Инсбрук Альт"
@@ -27,7 +27,7 @@
                         group="Артстрой"
                         status="В наличии"
                         />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="ar-tro-2.jpeg"
                         name="Инсбрук Тироль"
@@ -35,7 +35,7 @@
                         group="Артстрой"
                         status="В наличии"
                         />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="ar-tro-3.jpeg"
                         name="Валенсия"
@@ -43,7 +43,7 @@
                         group="Артстрой"
                         status="В наличии"
                         />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="ar-tro-4.jpeg"
                         name="Новый город Рид"
@@ -51,7 +51,7 @@
                         group="Артстрой"
                         status="В наличии"
                         />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="ya-tro-3.jpg"
                         name="Старый Город"
@@ -59,7 +59,7 @@
                         group="Ярстрой"
                         status="В наличии"
                         />
-                    <AppProductItem
+                    <LayoutAppFramePreview
                         url="/"
                         image="ya-tro-4.jpg"
                         name="Кирпич"

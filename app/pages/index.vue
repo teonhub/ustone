@@ -1,11 +1,7 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
     <main>
-    <AppMainGroups />
-    <AppMainHit />
-    <AppMainSeason />
+        <PageIndexSeries />
+        <PageIndexFrequent />
+        <PageIndexSeason />
     </main>
 </template>

@@ -2,19 +2,19 @@
     <footer>
         <div class="container-large">
             <div class="footer-contact">
-                <AppBrands name="Greatstone" />
-                <AppBrands name="Артстрой" />
-                <AppBrands name="Ярстрой" />
-                <AppBrands name="Ecodecking" />
-                <AppBrands name="Gidrolica" />
-                <AppBrands name="Interbau" />
+                <LayoutAppFooterBrand name="Greatstone" />
+                <LayoutAppFooterBrand name="Артстрой" />
+                <LayoutAppFooterBrand name="Ярстрой" />
+                <LayoutAppFooterBrand name="Ecodecking" />
+                <LayoutAppFooterBrand name="Gidrolica" />
+                <LayoutAppFooterBrand name="Interbau" />
             </div>
         </div>
         <div class="copyright">
             <div class="container-large">
                 <div class="footer-logo">
                     <div>
-                        <AppLogo />
+                        <UiAppLogotype />
                     </div>
                     <div>
                         <a class="btn-phone" href="tel:+79624752400">Тел. +7 962 475 24 00</a>
@@ -53,11 +53,11 @@
                     </div> 
                 </div>
                 <div class="btns-service">
-                    <AppRating />
-                    <AppMessenger />
+                    <LayoutAppFooterRating />
+                    <LayoutAppFooterSocial />
                 </div>
                 <div class="footer-copyright">
-                    <AppCopyright />
+                    <LayoutAppFooterBottom />
                 </div>
             </div>
         </div>

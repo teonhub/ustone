@@ -11,7 +11,7 @@
         <section class="layout-commodity">
             <div class="container-large">
                 <div class="bread-crumbs">
-                    <AppBreadcrumbs />
+                    <UiAppBreadcrumbs />
                     <h1>Контактная информация</h1>
                 </div>
 

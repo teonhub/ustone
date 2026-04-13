@@ -14,7 +14,7 @@
         <div class="columns">
             <div>
                 <NuxtLink to="/" class="unst-logotype-m">
-                    <AppLogo />
+                    <UiAppLogotype />
                 </NuxtLink>
             </div>
             <div>
