@@ -1,4 +1,4 @@
-### Nuxtapp [ecommerce]
+### Nuxt [ecommerce]
 
    ```bash  
    url: https://under-stone.ru

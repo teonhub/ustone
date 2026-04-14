@@ -1,72 +1,89 @@
+<script setup lang="ts">
+
+    interface SeasonCommodity {
+        frame_url:  string;
+        frame_img:  string;
+        frame_name: string;
+        frame_rate: string;
+        frame_bran: string;
+        frame_stat: string;
+    }
+
+    const seasonCommodities: SeasonCommodity[] = [
+        {
+            frame_url: "/",
+            frame_img: "ya-tro-1.jpg",
+            frame_name: "Инсбрук",
+            frame_rate: "980",
+            frame_bran: "Ярстрой",
+            frame_stat: "В наличии"
+        },
+        {
+            frame_url: "/",
+            frame_img: "ya-tro-2.png",
+            frame_name: "Вилла",
+            frame_rate: "980",
+            frame_bran: "Ярстрой",
+            frame_stat: "В наличии"
+        },
+        {
+            frame_url: "/",
+            frame_img: "ar-tro-1.jpeg",
+            frame_name: "Инсбрук Альт",
+            frame_rate: "900",
+            frame_bran: "Артстрой",
+            frame_stat: "В наличии"
+        },
+        {
+            frame_url: "/",
+            frame_img: "ar-tro-2.jpeg",
+            frame_name: "Инсбрук Тироль",
+            frame_rate: "1 070",
+            frame_bran: "Артстрой",
+            frame_stat: "В наличии"
+        },
+        {
+            frame_url: "/",
+            frame_img: "ar-tro-3.jpeg",
+            frame_name: "Валенсия",
+            frame_rate: "1 240",
+            frame_bran: "Артстрой",
+            frame_stat: "В наличии"
+        },
+        {
+            frame_url: "/",
+            frame_img: "ar-tro-4.jpeg",
+            frame_name: "Новый город Рид",
+            frame_rate: "1 240",
+            frame_bran: "Артстрой",
+            frame_stat: "В наличии"
+        },
+        {
+            frame_url: "/",
+            frame_img: "ya-tro-3.jpg",
+            frame_name: "Старый Город",
+            frame_rate: "820",
+            frame_bran: "Ярстрой",
+            frame_stat: "В наличии"
+        },
+        {
+            frame_url: "/",
+            frame_img: "ya-tro-4.jpg",
+            frame_name: "Кирпич",
+            frame_rate: "780",
+            frame_bran: "Ярстрой",
+            frame_stat: "В наличии"
+        }
+    ];
+
+</script>
+
 <template>
     <section class="season-commodity">
         <div class="container-large">
             <h3>Тротуарная плитка в Орле</h3>
                 <div class="grid-season">
-                    <LayoutAppFramePreview
-                        url="/"
-                        image="ya-tro-1.jpg"
-                        name="Инсбрук"
-                        price="980"
-                        group="Ярстрой"
-                        status="В наличии"
-                    />
-                    <LayoutAppFramePreview
-                        url="/"
-                        image="ya-tro-2.png"
-                        name="Вилла"
-                        price="980"
-                        group="Ярстрой"
-                        status="В наличии"
-                    />
-                    <LayoutAppFramePreview
-                        url="/"
-                        image="ar-tro-1.jpeg"
-                        name="Инсбрук Альт"
-                        price="900"
-                        group="Артстрой"
-                        status="В наличии"
-                        />
-                    <LayoutAppFramePreview
-                        url="/"
-                        image="ar-tro-2.jpeg"
-                        name="Инсбрук Тироль"
-                        price="1 070"
-                        group="Артстрой"
-                        status="В наличии"
-                        />
-                    <LayoutAppFramePreview
-                        url="/"
-                        image="ar-tro-3.jpeg"
-                        name="Валенсия"
-                        price="1 240"
-                        group="Артстрой"
-                        status="В наличии"
-                        />
-                    <LayoutAppFramePreview
-                        url="/"
-                        image="ar-tro-4.jpeg"
-                        name="Новый город Рид"
-                        price="1 240"
-                        group="Артстрой"
-                        status="В наличии"
-                        />
-                    <LayoutAppFramePreview
-                        url="/"
-                        image="ya-tro-3.jpg"
-                        name="Старый Город"
-                        price="820"
-                        group="Ярстрой"
-                        status="В наличии"
-                        />
-                    <LayoutAppFramePreview
-                        url="/"
-                        image="ya-tro-4.jpg"
-                        name="Кирпич"
-                        price="780"
-                        group="Ярстрой"
-                        status="В наличии"
-                        />
+                    <LayoutAppFramePreview v-for="commodity in seasonCommodities" :key="commodity.frame_name" v-bind="commodity" />
                 </div>
             </div>
         </section>
