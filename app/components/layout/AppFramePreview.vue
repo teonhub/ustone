@@ -6,7 +6,6 @@
         frame_name: string;
         frame_rate: string;
         frame_bran: string;
-        frame_stat: string;
     }>();
 
 </script>
@@ -18,22 +17,23 @@
                 <img :src="`/files/image/season/${frame_img}`" :alt="frame_name" />
             </NuxtLink>
         </div>
+        <div class="commodity-group">
+            <div class="group-name">[ {{ frame_bran }} ]</div>
+        </div>
         <div class="commodity-name">
             <NuxtLink :to="frame_url">
                 {{ frame_name }}
             </NuxtLink>
         </div>
-        <div class="commodity-value">
-            <div class="prefix">от</div>
-            <div class="value">{{ frame_rate }}</div>
-            <div class="currency">₽</div>
-        </div>
-        <div class="commodity-group">
-            <div class="group-name">{{ frame_bran }}</div>
-            <div class="group-status">{{ frame_stat }}</div>
-        </div>
-        <div class="commodity-link">
-            <NuxtLink :to="frame_url">Узнать больше</NuxtLink>
+        <div style="display: flex;justify-content: space-between;align-items: center;">
+            <div class="commodity-value">
+                <div class="value">{{ frame_rate }} ₽</div>
+            </div>
+            <div class="commodity-link">
+                <NuxtLink :to="frame_url">
+                    Подробнее
+                </NuxtLink>
+            </div>
         </div>
     </div>
 </template>

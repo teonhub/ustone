@@ -69,19 +69,18 @@
 <template>
     <section class="main-groups">
         <div class="container-large">
-            <h2>Каталог</h2>
-                <div class="grid-group">
-                    <NuxtLink v-for="serie in series" :key="serie.series_name" :to="serie.series_url">
-                        <div :class="['group', serie.series_class]">
-                            <div class="group-heading">
-                                {{ serie.series_name }}
-                            </div>
-                            <div class="group-items">
-                                {{ serie.series_text }}
-                            </div>
+            <div class="grid-group">
+                <NuxtLink v-for="serie in series" :key="serie.series_name" :to="serie.series_url">
+                    <div :class="['group', serie.series_class]">
+                        <div class="group-heading">
+                            {{ serie.series_name }}
                         </div>
-                    </NuxtLink>
-                </div>
+                        <div class="group-items">
+                            {{ serie.series_text }}
+                        </div>
+                    </div>
+                </NuxtLink>
             </div>
-        </section>
+        </div>
+    </section>
 </template>

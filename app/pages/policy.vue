@@ -10,7 +10,7 @@
     <main>
         <section class="layout-commodity">
             <div class="container-large">
-                <div class="bread-crumbs">
+                <div class="bread-crumbs" aria-label="Хлебные крошки">
                     <UiAppBreadcrumbs />
                     <h1>Политикой обработки персональных данных</h1>
                 </div>
