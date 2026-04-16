@@ -17,7 +17,7 @@
                         <UiAppLogotype />
                     </div>
                     <div>
-                        <a class="btn-phone" href="tel:+79624752400">Тел. +7 962 475 24 00</a>
+                        <a class="btn-phone" href="tel:+79624752400">+7 (962) 475 24 00</a>
                     </div>
                 </div>
                 <div class="grid-footer">

@@ -1,4 +1,3 @@
 <template>
     <LayoutAppHeaderRouter />
-    <LayoutAppHeaderRouterDevice />
 </template>

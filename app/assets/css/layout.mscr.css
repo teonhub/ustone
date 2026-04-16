@@ -1,10 +1,92 @@
 @media (max-width: 575.98px) {
-   header.desktop{
-      display: none;
-   }
-   header.mobile{
-      display: block;
-   }
+    header.desktop, .ustone-search{
+        display: none;
+    }
+    header .header-ui{
+        padding: 15px 15px;
+    }
+    header .ustone-logotype{
+        width: 25%;
+    }
+    header .ustone-compare{
+        width: 75%;
+    }
+    header .ustone-logotype a svg{
+        height: 40px;
+    }
+    header .ustone-compare .adress{
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    header .ustone-compare button.btn-compare{
+        font-size: 13px;
+    }
+    header .main-menu{
+        height: 52px;
+        line-height: 52px;
+    }
+    header .main-menu nav ul li{
+        width: 50%;
+    }
+    header .main-menu nav ul li a{
+        width: 52px;
+        line-height: 52px;
+        width: 100%;
+    }
+    header .main-menu button.menu-item.menu-dropdown{
+        height: 52px;
+        width: 100%;
+    }
+    header .main-menu nav ul li:nth-child(2),
+    header .main-menu nav ul li:nth-child(3){
+        display: none;
+    }
+    header .main-menu nav ul li:nth-last-child(-n+2){
+        width: 150px;
+    }
+    header .menu-dropdown-items{
+        top: 58px;
+        left: 5px;
+        width: 98%;
+    }
+    header .menu-dropdown-items.aggressive div{
+        width: 100%;
+    }
+    section.season-commodity .commodity-wrap .commodity-group{
+        margin-bottom: 5px;
+    }
+    section.season-commodity .commodity-wrap .layout-compare{
+        bottom: 0;
+        height: 27px;
+        right: 5px;
+    }
+    section.season-commodity .commodity-wrap .layout-compare button.btn-compare{
+        height: 27px;
+    }
+    section.season-commodity .commodity-wrap .commodity-link a{
+        margin-right: 45px;
+    }
+    section.season-commodity .commodity-wrap .commodity-value{
+        margin: 0;
+    }
+    section.season-commodity .commodity-wrap .commodity-value .value{
+        font-size: 18px;
+        margin-right: 0;
+    }
+    section.season-commodity .commodity-wrap .commodity-name{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        min-height: 85px;
+        font-size: 14px;
+    }
+    section.season-commodity h3{
+        margin-top: 85px;
+        font-size: 20px;
+        text-align: left;
+        font-weight: 600;
+    }
+    
    header.mobile .columns{
       position: relative;
       z-index: 1001;
@@ -145,8 +227,7 @@
    }
    section.layout-commodity h1,
    section.season-commodity .bread-crumbs h1,
-   section.main-groups h2,
-   section.season-commodity h3{
+   section.main-groups h2{
       font-size: 20px;
       text-align: center;
       margin-top: 5px;
@@ -178,28 +259,16 @@
    section.season-commodity .commodity-wrap{
       padding: 0;
    }
-   section.season-commodity .commodity-wrap .commodity-group{
-      flex-direction: column;
-   }
+
    section.season-commodity .commodity-wrap .commodity-image{
       padding: 10px;
       height: 170px;
-   }
-   section.season-commodity .commodity-wrap .commodity-name{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /* height: 45px; */
-      font-size: 15px;
    }
    section.layout-commodity .grid-gallery .item-gallery:nth-child(1), section.layout-commodity .grid-gallery .item-gallery:nth-child(2), section.layout-commodity .grid-gallery .item-gallery:nth-child(3), section.layout-commodity .grid-gallery .item-gallery:nth-child(4){
       border: 0;
    }
    section.layout-commodity .grid-gallery .box-img{
       height: 190px;
-   }
-   section.season-commodity .commodity-wrap .commodity-value{
-      margin-top: 5px;
    }
    section.season-commodity .commodity-wrap .commodity-group{
       margin-top: 15px;
@@ -219,11 +288,7 @@
       font-size: 12px;
       background: #fff;
    }
-   section.season-commodity .commodity-wrap .commodity-link a{
-      font-size: 14px;
-      height: 40px;
-      line-height: 40px;
-   }
+
    .container-large{
       padding: 0 15px;
    }

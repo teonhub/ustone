@@ -24,7 +24,7 @@
 
 <style scoped>
 
-.cls-1 {fill: #f68d39;}
+.cls-1 {fill: #f78224;}
 .cls-2 {fill: #f5f6f6;}
 
 </style>

@@ -1,18 +1,23 @@
 :root{
     --main-color: #f58c39; /* #0071e3*/
     --main-radius: 0px;
-    --main-font: 'Roberto Sans';
+    --main-font: "Inter", sans-serif;
 }
 
 header.mobile{
     display: none;
 }
 
-.container-large{
+.container-large,
+.btn-menu{
     width: 100%;
-    max-width: 1360px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.btn-menu{
+    position: relative;
 }
 
 body{
@@ -21,48 +26,189 @@ body{
 }
 
 header{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
     width: 100%;
-    /* max-width: 1865px; */
     margin-left: auto;
     margin-right: auto;
-
     box-sizing: border-box;
-    border-radius: var(--main-radius);
-    background: #000;
 }
 
-header .unst-logotype{
-    height: 80px;
+header .header-ui{
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 30px 15px;
+}
+
+header .ustone-logotype{
+    width: 15%;
+}
+
+header .ustone-logotype a svg{
+    height: 45px;
+}
+
+header .ustone-search{
+    width: 60%;
+}
+
+header .ustone-search form {
+    width: 100%;
+    display: block;
+}
+
+header .ustone-search form input{
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+    height: 45px;
+    border: 0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    background-color: #f1f1f6;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+header .ustone-search .btn-search{
     width: 100px;
-    margin-right: 50px;
-    margin-left: 20px;
-    border-radius: var(--main-radius);
-    background: #000;
+    height: 45px;
+    margin-left: 10px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out 0s;
 }
 
-header .unst-logotype a{
+header .ustone-search .btn-search:hover{
+    background-color: #f78224;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+header .ustone-compare{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+}
+
+header .ustone-compare .adress{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    margin-left: 25px;
+}
+
+header .ustone-compare .adress a{
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2px;
+}
+
+header .ustone-compare button.btn-compare{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
-    width: 100px;
+    width: 120px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    background-color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
-header .menu-main{
+header .ustone-compare button.btn-compare svg{
+    fill: #dfdfdf;
+    height: 26px;
+    margin-right: 10px;
+}
+
+header .main-menu{
+    width: 100%;
+    height: 58px;
+    background-color: #000;
+}
+
+header .main-menu button.menu-item.menu-dropdown{
+    height: 58px;
+    width: 180px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #f78224;
+    cursor: pointer;
+}
+
+header .menu-dropdown-items{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 62px;
+    border-radius: 4px;
+    background: #181818;
+}
+
+header .menu-dropdown-items.aggressive{
+    display: block !important;
+}
+
+header .main-menu nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
     width: 100%;
-    background: #000000;
-    font-weight: 600;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-header .menu-main .menu-item.menu-dropdown{
+header .main-menu nav ul li:nth-child(3){
+    flex-grow: 1;
+}
+
+header .main-menu nav ul li:nth-last-child(-n+2){
+    width: 220px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+header .main-menu nav ul li:nth-child(4){
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+header .main-menu nav ul li a{
+    display: block;
+    width: 150px;
+    height: 58px;
+    line-height: 58px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+header .main-menu nav ul li a:hover{
+    background-color: #272727;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+
+header .menu-item.menu-dropdown{
     height: 40px;
     width: 130px;
     margin-right: 20px;
@@ -91,38 +237,37 @@ header .menu-main .menu-item.menu-dropdown a:hover{
     transition: all 0.3s ease-in-out 0s;
 }
 
-header .menu-main .menu-item.menu-dropdown .menu-dropdown-items{
-    display: none;
-    position: relative;
-    z-index: 100;
-    top: 30px;
+header .menu-dropdown-items a span {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-header .menu-main .menu-item.menu-dropdown .menu-dropdown-items.aggressive{
-    display: block !important;
+header .menu-dropdown-items a span img {
+    display: block;
+    width: 50px;
+    margin-right: 15px;
 }
 
-header .menu-main .menu-item.menu-dropdown .menu-dropdown-items.aggressive div{
-    width: 330px;
-    padding: 10px;
-    background: #181818;
+header .menu-dropdown-items.aggressive div{
+    width: 320px;
+    padding: 0 5px;
 }
 
-header .menu-main .menu-item.menu-dropdown .menu-dropdown-items.aggressive a{
+header .menu-dropdown-items.aggressive a{
     width: 300px;
     text-align: left;
-    background: #181818;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-header .menu-main .menu-item.menu-dropdown .menu-dropdown-items.aggressive a:hover{
-    background: #1e1e1e;
+header .menu-dropdown-items.aggressive a:hover{
+    background: #272727;
     color: #fff;
 }
 
-header .menu-main .menu-item.menu-dropdown .menu-dropdown-items.aggressive a{
+header .menu-dropdown-items.aggressive a{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -378,16 +523,16 @@ section.main-groups .grid-group .group a{
 
 section.main-groups .grid-group .group .group-heading{
     color: #000;
-    font-size: 19px;
+    font-size: 18px;
     margin-bottom: 15px;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 section.main-groups .grid-group .group .group-items{
-    color: #9f9f9f;
+    color: #636363;
     font-size: 14px;
-    line-height: 22px;  
+    line-height: 22px;
+    font-weight: 500;
     max-width: 330px;
 }
 
@@ -396,7 +541,8 @@ section.season-commodity{
 }
 
 section.season-commodity h3{
-    font-size: 30px;
+    font-size: 26px;
+    font-weight: 600;
     margin-bottom: 30px;    
 }
 
@@ -412,6 +558,7 @@ section.season-commodity .commodity-wrap{
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    position: relative;
     padding: 30px;
     border: 1px solid #fff;
     -webkit-transition: all 0.5sease-in-out 0s;
@@ -420,10 +567,28 @@ section.season-commodity .commodity-wrap{
 }
 
 section.season-commodity .commodity-wrap:hover{
+    border-radius: 6px;
     border: 1px solid #ebebeb;
     -webkit-transition: all 0.5sease-in-out 0s;
     -moz-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
+}
+
+section.season-commodity .commodity-wrap .layout-compare{
+    position: absolute;
+    display: block;
+    bottom: 25px; right: 20px;
+    width: 33px; height: 33px;
+}
+
+section.season-commodity .commodity-wrap .layout-compare button.btn-compare{
+    cursor: pointer;
+    width: 33px; height: 33px;
+    background-color: inherit;
+}
+
+section.season-commodity .commodity-wrap .layout-compare button.btn-compare svg{
+    fill: #ddd;
 }
 
 section.season-commodity .commodity-wrap a{
@@ -451,11 +616,11 @@ section.season-commodity .commodity-wrap .commodity-group .group-name{
     align-items: center;
     font-size: 12px;
     font-weight: 400;
-    color: #111;
+    color: #a7a6a6;
     height: 30px;
     text-align: center;
     line-height: 24px;
-    padding: 0;
+    margin-bottom: 3px;
 }
 /*
 section.season-commodity .commodity-wrap .commodity-group .group-name::before{
@@ -491,11 +656,12 @@ section.season-commodity .commodity-wrap .commodity-group .group-status{
 
 
 section.season-commodity .commodity-wrap .commodity-name{
+    min-height: 40px;
     font-size: 15px;
     font-weight: 500;
     line-height: 20px;
     text-align: left;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 section.season-commodity .commodity-wrap .commodity-value{
@@ -518,15 +684,17 @@ section.season-commodity .commodity-wrap .commodity-value .value{
 
 section.season-commodity .commodity-wrap .commodity-link a{
     display: block;
-    width: 150px;
-    height: 42px;
+    width: 42px;
+    height: 28px;
+    margin-right: 30px;
     box-sizing: border-box;
-    line-height: 38px;
     color: #fff;
-    border-radius: 4px;
+    
+    border-right: 1px solid  #ebebeb;
     text-align: center;
     font-size: 13px;
-    background: #000;
+    background: #fff;
+    padding: 0;
     -webkit-transition: all 0.3 sease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
@@ -539,6 +707,10 @@ section.season-commodity .commodity-wrap .commodity-link a:hover{
     transition: all 0.3s ease-in-out 0s;
 }
 
+section.season-commodity .commodity-wrap .commodity-link a svg{
+    height: 34px;
+    fill: #d1d1d1;
+}
 
 section.layout-commodity{
     margin-top: 50px;
@@ -814,7 +986,7 @@ main .wrap-contact .contact-line{
 }
 footer{
     margin-top: 180px;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 footer .footer-contact{
     display: flex;
@@ -823,13 +995,12 @@ footer .footer-contact{
 }
 footer .footer-contact .contact-cell{
     width: 100%;
-    height: 52px;
+    height: 32px;
     text-align: center;
-    border: 1px solid #ddd;
-    border-right: 0px;
+    border-right: 1px solid #ddd;
 }
 footer .footer-contact .contact-cell:nth-child(6){
-    border-right: 1px solid #ddd;
+    border-right: 0;
 }
 footer .footer-contact .contact-cell .contact-heading{
     color: #bdbdbd;
@@ -841,7 +1012,7 @@ footer .footer-contact .contact-cell .contact-content{
 }
 footer .copyright{
     position: relative;
-    margin-top: 65px;
+    margin-top: 40px;
     min-height: 165px;
     background: #000;
     color: #fff;
@@ -868,10 +1039,10 @@ footer .copyright .footer-copyright{
 }
 
 footer .copyright .footer-copyright .copyright-cell{
-    color: #a4b5a8;
+    color: #fff;
     width: 100%;
     font-size: 14px;
-    font-weight: 400;  
+    font-weight: 300;  
 }
 
 footer .copyright .footer-copyright .copyright-cell:nth-child(3){
@@ -1120,7 +1291,6 @@ footer .copyright .footer-copyright .copyright-cell button.arrow-top:hover{
 }
 
 
-
 section.cookie-notification{
   position: fixed;
   z-index: 8888;
@@ -1159,18 +1329,17 @@ section.cookie-notification button.cookie-accept:hover{
   background: #5e9390;
 }
 
-
 footer{
     background: #f3f3f3;
 }
 
 footer .footer-contact .contact-cell .contact-heading span{
-    color: #777777;
+    color: #ababab;
     display: block;
-    height: 52px;
+    height: 32px;
     font-size: 14px;
-    line-height: 48px;
-    font-weight: 400;
+    line-height: 32px;
+    font-weight: 600;
 }
 
 footer .footer-contact .contact-cell .contact-heading span{
@@ -1196,15 +1365,15 @@ footer .footer-logo svg{
 footer .btn-phone{
     color: #fff;
     text-decoration: none;
-    background: #39393d;
+    background: #181818;
     display: block;
-    width: 200px;
+    width: 180px;
     height: 42px;
     border-radius: 2px;
     line-height: 40px;
     text-align: center;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 footer ul{
@@ -1212,17 +1381,19 @@ footer ul{
 }
 
 footer ul li{
-    font-size: 14px;
+    font-size: 15px;
     color: #fff;
-    padding: 7px 0;
+    padding: 8px 0;
 }
 
 footer ul li:nth-child(1){
     padding: 30px 0;
+    font-weight: 600;
 }
 
 footer ul li a{
     font-size: 14px;
+    font-weight: 300;
     color: #b5b5b9;
     text-decoration: none;
 }

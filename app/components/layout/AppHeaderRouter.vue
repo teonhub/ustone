@@ -2,17 +2,17 @@
     
     import { ref } from 'vue';
 
-    interface SeriesElement {
-        series_url:   string;
-        series_image: string;
-        series_name:  string;
-    }
-
     const isMenuOpen = ref(false);
 
     const toggleMenu = () => {
         isMenuOpen.value = !isMenuOpen.value;
     };
+
+    interface SeriesElement {
+        series_url:   string;
+        series_image: string;
+        series_name:  string;
+    }
 
     const series: SeriesElement[] = [
         { 
@@ -65,6 +65,58 @@
 </script>
 
 <template>
+    <header>
+        <div class="header-ui">
+            <div class="ustone-logotype">
+                <NuxtLink to="/">
+                    <UiAppLogotype />
+                </NuxtLink>
+            </div>
+            <div class="ustone-search">
+                <form action="#">
+                    <input type="search" name="" placeholder="Поиск" />
+                    <button type="submit" class="btn-search">Найти</button>
+                </form>
+            </div>
+            <div class="ustone-compare">
+                <button type="button" class="btn-compare">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.0" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 237 281.25" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd"><g><polygon class="fil0" points="118,0 144,84 237,86 165,137 191,225 121,172 45,225 73,142 0,86 88,87 "/></g></svg> Избранное
+                </button>
+                <div class="adress">
+                    <a target="_blank" href="https://yandex.ru/maps/-/CPv8bUP~">ул. Московская, 43А</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-menu">
+            <div class="btn-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <button type="button" class="menu-item menu-dropdown" @click.prevent="toggleMenu">Все категории</button>
+                                <div class="menu-dropdown-items" :class="{ 'aggressive': isMenuOpen }">
+                                    <div v-for="serie in series" :key="serie.series_name" >
+                                        <NuxtLink :to="serie.series_url">
+                                            <span>
+                                                <img :src="`/files/image/category/${serie.series_image}`" :alt="serie.series_name" />
+                                            </span>
+                                            <span>
+                                                {{ serie.series_name }}
+                                            </span>
+                                        </NuxtLink>
+                                    </div>
+                                </div>
+                            </li>
+                        <li><NuxtLink to="/sertificate">Сертификаты</NuxtLink></li>
+                        <li><NuxtLink to="/contact">Контакты</NuxtLink></li>
+                        <li><NuxtLink to="/">+7 (962) 475 24 00</NuxtLink></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--
     <header class="desktop">
         <div class="unst-logotype">
             <NuxtLink to="/">
@@ -104,6 +156,9 @@
                 <div class="menu-item whatsapp">
                     <a href="https://t.me/UnderStone57" target="_blank">Telegram</a>
                 </div>
+                
             </div>
+            
         </header>
+         -->
 </template>

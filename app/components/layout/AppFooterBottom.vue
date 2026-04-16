@@ -1,5 +1,5 @@
 <template>
     <div class="copyright-cell">
-        © 2026 «Uderstone» магазин фирменных строительных материалов
+        © 2026 «Uderstone»
     </div>
 </template>
