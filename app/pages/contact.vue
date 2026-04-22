@@ -10,10 +10,8 @@
     <main>
         <section class="layout-commodity">
             <div class="container-large">
-                <div class="bread-crumbs" aria-label="Хлебные крошки">
-                    <UiAppBreadcrumbs />
-                    <h1>Контактная информация</h1>
-                </div>
+                <UiAppBreadcrumbs />
+                <UiAppPageHeading title="Контактная информация" />
 
                 <div class="wrap-contact">
                     <div class="contact-line">

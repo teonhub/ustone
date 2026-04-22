@@ -1,49 +1,12 @@
 <script setup>
 
-    import { computed } from 'vue'
     import { useProduceStore } from '~/stores/produce'
-    import { useRoute, useRouter } from 'vue-router'
-
     const store = useProduceStore()
-    const route = useRoute()
-    const router = useRouter()
 
-    // Получаем текущий слаг серии из URL
-    const currentFilterSlug = computed(() => route.query.series)
-
-    // Формируем список уникальных серий с их слагами для кнопок
-    const uniqueSeries = computed(() => {
-        const seriesMap = new Map()
-        
-        store.stones.forEach(stone => {
-            const slug = slugify(stone.series) // используем нашу утилиту
-                if (!seriesMap.has(slug)) {
-                seriesMap.set(slug, stone.series)
-            }
-        })
-
-        // Возвращаем массив объектов { slug, name }
-        return Array.from(seriesMap).map(([slug, name]) => ({ slug, name }))
+    useHead({
+        title: 'Тротуарная плитка',
+        meta: [{ name: 'description', content: '...' }]
     })
-
-    // Фильтруем товары на основе слага в URL
-    const filteredStones = computed(() => {
-        if (!currentFilterSlug.value) {
-            return store.stones
-        }
-    
-        return store.stones.filter(stone => slugify(stone.series) === currentFilterSlug.value)
-    })
-
-    // Функция для обновления URL при нажатии на кнопку
-    const updateFilter = (slug) => {
-        router.push({
-            query: {
-            ...route.query,
-                series: slug || undefined
-            }
-        })
-    }
 
     definePageMeta({
         breadcrumb: 'Тротуарная плитка'
@@ -52,69 +15,30 @@
 </script>
 
 <template>
-    <main>
-        <section class="season-commodity">
-            <div class="container-large">
-                <div class="bread-crumbs" aria-label="Хлебные крошки">
-                    <UiAppBreadcrumbs />
-                    <h1>Тротуарная плитка</h1>
-                </div>
-
-
-                <div>
-                    <!-- Кнопки фильтрации -->
-                    <div class="filter-buttons">
-                    <!-- Кнопка "Все" — удаляет параметр из URL -->
-                    <button :class="{ active: !currentFilterSlug }" @click="updateFilter(null)">Все серии</button>
-
-                    <!-- Кнопки уникальных серий -->
-                    <button v-for="series in uniqueSeries" :key="series.slug" :class="{ active: currentFilterSlug === series.slug }" @click="updateFilter(series.slug)">
-                        <span>{{ series.name }}</span>
-                    </button>
-                </div>
-    
-                <div class="grid-season">
-                    <LayoutAppFramePreview v-for="stone in filteredStones" 
-                        :key="stone.id"
-                        :frame_url="`/trotuarnaya-plita/${stone.slug}`"
-                        :frame_img="stone.picture"
-                        :frame_name="stone.name"
-                        :frame_rate="stone.price"
-                        :frame_bran="stone.manufacturer"
-                    />
-                </div>
-                <div v-if="filteredStones.length === 0">
-                    <p>В этой категории пока нет товаров.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+    <LayoutAppBrowser :items="store.stones" />
 </template>
 
 
-<style scoped>
-.filter-buttons {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-button {
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  background: #f9f9f9;
-  cursor: pointer;
-  border-radius: 5px;
-}
-button.active {
-  background: #000;
-  color: #fff;
-  border-color: #000;
-}
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-}
+
+
+
+
+
+
+<style>
+/* Стили оставляем те же, что были в предыдущем ответе */
+.filters-container { background: #f4f4f4; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+.filter-group { margin-bottom: 15px; }
+.filter-group h4 { margin: 0 0 10px 0; font-size: 14px; color: #666; }
+
+/* ломает избранное */
+.buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+button { padding: 6px 12px; border: 1px solid #ccc; background: white; cursor: pointer; border-radius: 4px; font-size: 13px; }
+button.active { background: #007bff; color: white; border-color: #0056b3; }
+
+.reset-btn { margin-top: 10px; background: #ff4d4d; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
+.product-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.pagination-container { display: flex; justify-content: center; margin: 40px 0; }
+.show-more-btn { padding: 15px 40px; background-color: #28a745; color: white; border: none; border-radius: 30px; cursor: pointer; font-weight: bold; }
+.empty-msg { text-align: center; padding: 40px; color: #999; }
 </style>

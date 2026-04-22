@@ -4,7 +4,7 @@
         frame_url:  string;
         frame_img:  string;
         frame_name: string;
-        frame_rate: string;
+        frame_rate: number | string;
         frame_bran: string;
     }>();
 

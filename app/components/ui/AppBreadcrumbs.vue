@@ -43,10 +43,12 @@
 </script>
 
 <template>
-    <ol class="breadcrumb">
-        <li v-for="(crumb, index) in breadcrumbs" :key="index" class="breadcrumb-item">
-            <NuxtLink v-if="!crumb.disabled" :to="crumb.to">{{ crumb.label }}</NuxtLink>
-            <span v-else class="active">{{ crumb.label }}</span>
-        </li>
-    </ol>
+    <div class="bread-crumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumb">
+            <li v-for="(crumb, index) in breadcrumbs" :key="index" class="breadcrumb-item">
+                <NuxtLink v-if="!crumb.disabled" :to="crumb.to">{{ crumb.label }}</NuxtLink>
+                <span v-else class="active">{{ crumb.label }}</span>
+            </li>
+        </ol>
+    </div>
 </template>

@@ -93,10 +93,9 @@
     <main>
         <section class="layout-commodity">
             <div class="container-large">
-                <div class="bread-crumbs" aria-label="Хлебные крошки">
-                    <UiAppBreadcrumbs />
-                    <h1>Сертификаты</h1>
-                </div>
+                <UiAppBreadcrumbs />
+                <UiAppPageHeading title="Сертификаты" />
+
                 <div class="document-items">
                     <div v-for="sertificate in sertificates" :key="sertificate.sertificate_name" class="document-item">
                         <a target="_blank" :href="sertificate.sertificate_url">
