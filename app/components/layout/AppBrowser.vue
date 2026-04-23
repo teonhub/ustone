@@ -7,8 +7,8 @@
     }>()
 
     const FILTER_CONFIG: FilterConfig[] = [
-        { label: 'Серия', queryKey: 'series', storeKey: 'series' },
-        { label: 'Цвет', queryKey: 'color', storeKey: 'base_color' },
+        { label: 'Коллекции', queryKey: 'series', storeKey: 'series' },
+        { label: 'Цвета', queryKey: 'color', storeKey: 'base_color' },
         { label: 'Высота', queryKey: 'height', storeKey: 'height' },
         { label: 'Поверхность', queryKey: 'surface', storeKey: 'surface' }
     ]
