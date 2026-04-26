@@ -69,7 +69,7 @@
         <div class="header-ui">
             <div class="ustone-logotype">
                 <NuxtLink to="/">
-                    <UiAppLogotype />
+                    <LayoutAppLogotype />
                 </NuxtLink>
             </div>
             <div class="ustone-search">
@@ -107,6 +107,7 @@
                                     </div>
                                 </div>
                             </li>
+                        <li><NuxtLink to="/">Распродажа</NuxtLink></li>
                         <li><NuxtLink to="/sertificate">Сертификаты</NuxtLink></li>
                         <li><NuxtLink to="/contact">Контакты</NuxtLink></li>
                         <li><NuxtLink to="/">+7 (962) 475 24 00</NuxtLink></li>

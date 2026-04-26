@@ -4,6 +4,13 @@
     --main-font: "Inter", sans-serif;
 }
 
+@font-face {
+	font-family: 'DrukWide';
+	src: url('../font/drukwide.eot');
+	src: url('../font/drukwide.woff2') format('woff2'),
+		 url('../font/drukwide.ttf') format('truetype'),
+}
+
 header.mobile{
     display: none;
 }
@@ -84,7 +91,7 @@ header .ustone-search .btn-search{
     background-color: #000;
     color: #fff;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     cursor: pointer;
     transition: all 0.5s ease-in-out 0s;
 }
@@ -143,12 +150,13 @@ header .main-menu{
 
 header .main-menu button.menu-item.menu-dropdown{
     height: 58px;
-    width: 180px;
-    font-size: 16px;
-    font-weight: 600;
+    width: 150px;
+    font-size: 14px;
+    font-weight: 500;
     color: #fff;
     background-color: #f78224;
     cursor: pointer;
+    border: 0;
 }
 
 header .menu-dropdown-items{
@@ -174,36 +182,38 @@ header .main-menu nav ul{
     margin: 0;
 }
 
-header .main-menu nav ul li:nth-child(3){
+header .main-menu nav ul li:nth-child(4){
     flex-grow: 1;
 }
 
 header .main-menu nav ul li:nth-last-child(-n+2){
-    width: 220px;
+    
     flex-shrink: 0;
     margin-left: auto;
 }
 
-header .main-menu nav ul li:nth-child(4){
+header .main-menu nav ul li:nth-child(5){
     display: flex;
     justify-content: flex-end;
     margin-right: 10px;
 }
 
-header .main-menu nav ul li a{
+header .main-menu nav ul li{
     display: block;
-    width: 150px;
     height: 58px;
     line-height: 58px;
-    font-size: 15px;
-    font-weight: 600;
+}
+
+header .main-menu nav ul li a{
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 500;
     color: #fff;
     text-decoration: none;
-    text-align: center;
+    transition: all 0.5s ease-in-out 0s;
 }
 
 header .main-menu nav ul li a:hover{
-    background-color: #272727;
     transition: all 0.5s ease-in-out 0s;
 }
 
@@ -542,7 +552,8 @@ section.season-commodity{
 
 section.season-commodity h3{
     font-size: 26px;
-    font-weight: 600;
+    font-family: 'DrukWide';
+    text-transform: uppercase;
     margin-bottom: 30px;    
 }
 
@@ -677,8 +688,8 @@ section.season-commodity .commodity-wrap .commodity-value .prefix{
 }
 
 section.season-commodity .commodity-wrap .commodity-value .value{
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 19px;
+    font-weight: 800;
     margin-right: 5px;
 }
 
@@ -727,10 +738,12 @@ ol.breadcrumb{
 }
 
 .app-heading h1{
-    font-size: 28px;
+    font-family: 'DrukWide';
+    text-transform: uppercase;
+    font-size: 26px;
     font-weight: 700;
     margin-bottom: 35px;
-    margin-top: 0;
+    margin-top: 5px;
 }
 
 ol.breadcrumb li.breadcrumb-item{
@@ -1028,7 +1041,7 @@ footer .copyright::after{
     bottom: 0;
     height: 30px;
     width: 30px;
-    background: var(--main-color);
+    background: #b9b9b9;
 }
 
 footer .copyright .footer-copyright{

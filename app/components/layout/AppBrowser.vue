@@ -14,8 +14,23 @@
     ]
 
     const itemsRef = computed(() => props.items)
-    const { filterOptions, activeFilters, filteredItems, hasActiveFilters, setFilter, resetAll, isFilterActive } = useProductFilter(itemsRef, FILTER_CONFIG)
-    const { paginatedItems, hasMore, remainingCount, loadMore } = usePagination(filteredItems, 24)
+
+    const { 
+        filterOptions, 
+        activeFilters, 
+        filteredItems, 
+        hasActiveFilters, 
+        setFilter, 
+        resetAll, 
+        isFilterActive 
+    } = useProductFilter(itemsRef, FILTER_CONFIG)
+
+    const { 
+        paginatedItems, 
+        hasMore, 
+        remainingCount, 
+        loadMore 
+    } = usePagination(filteredItems, 24)
 
 </script>
 
@@ -23,16 +38,14 @@
     <main>
         <section class="season-commodity">
             <div class="container-large">
-                <UiAppBreadcrumbs />
-                <UiAppPageHeading title="Тротуарная плитка" />
-
-                <LayoutAppBrowserFilter :config="FILTER_CONFIG"
+                <InterfaceBreadcrumbs />
+                <InterfaceHeading title="Тротуарная плитка" />
+                <InterfaceFetchFilter :config="FILTER_CONFIG"
                     :options="filterOptions"
                     :active-filters="activeFilters"
                     :has-active-filters="hasActiveFilters"
                     @set-filter="setFilter" @reset-all="resetAll"
                 />
-                
                 <div class="grid-season" v-if="paginatedItems.length">
                     <LayoutAppFramePreview v-for="stone in paginatedItems"
                         :key="stone.id"
@@ -43,12 +56,10 @@
                         :frame_bran="stone.manufacturer"
                     />
                 </div>
-                
                 <div v-else class="empty-msg">
-                    Товары не найдены.
+                    Товары отсутствуют
                 </div>
-
-                <LayoutAppBrowserFrameLoad v-if="hasMore"
+                <InterfaceFetchPagination v-if="hasMore"
                     :has-more="hasMore"
                     :remaining-count="remainingCount"
                     @load-more="loadMore"

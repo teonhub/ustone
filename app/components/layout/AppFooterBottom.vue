@@ -1,5 +1,5 @@
 <template>
     <div class="copyright-cell">
-        © 2026 «Uderstone»
+        © 2026 «Understone»
     </div>
 </template>

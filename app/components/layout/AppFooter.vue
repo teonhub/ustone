@@ -14,7 +14,7 @@
             <div class="container-large">
                 <div class="footer-logo">
                     <div>
-                        <UiAppLogotype />
+                        <LayoutAppLogotype />
                     </div>
                     <div>
                         <a class="btn-phone" href="tel:+79624752400">+7 (962) 475 24 00</a>

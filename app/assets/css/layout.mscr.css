@@ -38,11 +38,15 @@
         width: 100%;
     }
     header .main-menu nav ul li:nth-child(2),
-    header .main-menu nav ul li:nth-child(3){
+    header .main-menu nav ul li:nth-child(3),
+    header .main-menu nav ul li:nth-child(4){
         display: none;
     }
     header .main-menu nav ul li:nth-last-child(-n+2){
-        width: 150px;
+        width: 50%;
+    }
+    header .main-menu nav ul li:nth-child(5){
+        margin-right: 0;
     }
     header .menu-dropdown-items{
         top: 58px;
@@ -85,6 +89,10 @@
         font-size: 20px;
         text-align: left;
         font-weight: 600;
+    }
+    .app-heading h1{
+        font-size: 18px;
+        text-align: center;
     }
     
    header.mobile .columns{

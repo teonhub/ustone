@@ -10,8 +10,8 @@
     <main>
         <section class="layout-commodity">
             <div class="container-large">
-                <UiAppBreadcrumbs />
-                <UiAppPageHeading title="Контактная информация" />
+                <InterfaceBreadcrumbs />
+                <InterfaceHeading title="Контактная информация" />
 
                 <div class="wrap-contact">
                     <div class="contact-line">
