@@ -108,8 +108,9 @@
                                 </div>
                             </li>
                         <li><NuxtLink to="/">Распродажа</NuxtLink></li>
+                        <li><NuxtLink to="/">Бренды</NuxtLink></li>
                         <li><NuxtLink to="/sertificate">Сертификаты</NuxtLink></li>
-                        <li><NuxtLink to="/contact">Контакты</NuxtLink></li>
+                        <li><NuxtLink to="/contact">Магазин</NuxtLink></li>
                         <li><NuxtLink to="/">+7 (962) 475 24 00</NuxtLink></li>
                     </ul>
                 </nav>

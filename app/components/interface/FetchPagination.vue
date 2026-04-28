@@ -21,6 +21,12 @@
 
 <style scoped>
 
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
 .pagination-container .show-more-btn {
     width: 280px;
     height: 50px;

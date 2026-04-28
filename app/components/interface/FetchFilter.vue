@@ -62,6 +62,13 @@
         document.removeEventListener('click', handleClickOutside)
     })
 
+    const setFilter = (key: string, slug: string | null) => {
+        emit('setFilter', key, slug)
+        const next = new Set(expandedGroups.value)
+        next.delete(key)
+        expandedGroups.value = next
+    }
+
 </script>
 
 <template>
@@ -94,10 +101,10 @@
             <Transition name="filter-expand">
                 <div v-show="isExpanded(group.queryKey)" :id="`filter-panel-${group.queryKey}`" class="filter-panel" role="region">
                     <div class="filter-btns">
-                        <button type="button" :class="{ active: isActive(group.queryKey, null) }" @click="emit('setFilter', group.queryKey, null)">
+                        <button type="button" :class="{ active: isActive(group.queryKey, null) }" @click="setFilter(group.queryKey, null)">
                             <span>Все</span>
                         </button>
-                        <button type="button" v-for="item in options[group.queryKey]" :key="item.slug" :class="{ active: isActive(group.queryKey, item.slug) }" @click="emit('setFilter', group.queryKey, item.slug)">
+                        <button type="button" v-for="item in options[group.queryKey]" :key="item.slug" :class="{ active: isActive(group.queryKey, item.slug) }" @click="setFilter(group.queryKey, item.slug)">
                             <span>{{ item.name }}</span>
                         </button>
                     </div>
